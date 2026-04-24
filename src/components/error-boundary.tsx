@@ -1,4 +1,6 @@
-import { Component, type ErrorInfo, type ReactNode } from 'react'
+import type { ErrorInfo, ReactNode } from 'react'
+
+import { Component } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
@@ -31,13 +33,13 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
   fallback = () => {
     return (
-      <Card className='w-full max-w-md'>
+      <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle>Something went wrong</CardTitle>
           <CardDescription>An unexpected error occurred</CardDescription>
         </CardHeader>
-        <CardContent className='flex flex-col gap-4'>
-          <p className='text-sm text-muted-foreground'>{this.state.error?.message || 'An unexpected error occurred'}</p>
+        <CardContent className="flex flex-col gap-4">
+          <p className="text-sm text-muted-foreground">{this.state.error?.message || 'An unexpected error occurred'}</p>
           <Button onClick={this.handleReset}>Try again</Button>
         </CardContent>
       </Card>

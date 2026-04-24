@@ -1,0 +1,16 @@
+{
+  "plugins": ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss", "@xeonlink/prettier-plugin-organize-attributes"],
+
+  "tailwindFunctions": ["cn", "clsx", "cva", "twMerge"],
+  "tailwindStylesheet": "./src/index.css",
+
+  "importOrder": ["<TYPES>", "", "^vite$", "^react$", "^react-\\w+", "<THIRD_PARTY_MODULES>", "/theme", "^(@|..?)(/[\\w-/]+?)?(/_?components)(/[\\w-/]+)?", "^@/", "^[./]", "^@/lib/?", ""],
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "importOrderTypeScriptVersion": "5.0.0",
+
+  "attributeGroups": ["$CODE_GUIDE"],
+
+  "printWidth": 400,
+  "semi": false,
+  "singleQuote": true
+}

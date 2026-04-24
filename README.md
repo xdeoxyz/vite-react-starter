@@ -10,7 +10,7 @@ A modern React + Vite + TypeScript starter pack with shadcn/ui components, Tailw
 ## Features
 
 - **[React 19](https://react.dev/)** with [TypeScript](https://www.typescriptlang.org/) (strict mode)
-- **[Vite 7](https://vite.dev/)** for lightning-fast development and optimized production builds
+- **[Vite 8](https://vite.dev/)** for lightning-fast development and optimized production builds
 - **[shadcn/ui](https://ui.shadcn.com/)** component library built on Radix UI primitives
 - **[Tailwind CSS 4](https://tailwindcss.com/)** with Vite plugin for styling
 - **[React Router 7](https://reactrouter.com/)** for client-side routing
@@ -108,7 +108,7 @@ resolve: {
 
 ### TypeScript
 
-Strict mode is enabled with ES2022 target and DOM types.
+Strict mode is enabled with ES2023 target and DOM types.
 
 ### Tailwind CSS
 

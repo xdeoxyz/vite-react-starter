@@ -1,14 +1,29 @@
-import path from 'path'
+import { resolve } from 'path'
+
+import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
+export default defineConfig(({ command, mode }) => {
+  console.log({ command }, { mode })
+
+  switch (mode) {
+    case 'development':
+      return {
+        plugins: [react(), tailwindcss()],
+        resolve: { alias: { '@': resolve(__dirname, './src') } },
+      }
+
+    default:
+      switch (command) {
+        case 'build':
+          return { plugins: [tailwindcss()] }
+
+        default:
+          return {
+            preview: { strictPort: true },
+          }
+      }
+  }
 })
